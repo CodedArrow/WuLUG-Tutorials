@@ -1,1 +1,159 @@
-FotoForensics
+FotoForensics Writeup & Tutorial
+2/14/2026 - CodedArrow
+FF Ver. 1.1.5151 (2026-02-05)
+(Web) Link: https://www.fotoforensics.com/
+
+**Note**
+While documentation can be found at https://fotoforensics.com/tutorial.php, It is written mostly to forensic analysts, not students. Sometimes it can be helpful to have more explanations or a different take on it. Thus, I write
+this from a perspective of someone using it mainly for CTFs (NCL, NCAE).
+
+--------------------------------------------------------------------------------------------------------------------------
+
+  PhotoForensics is a powerful OSINT image metadata analysis tool capable of:
+    - ELA
+    - Games
+    - Hidden Pixels
+    - ICC+
+    - JPEG%
+    - Metadata
+    - Strings
+    - Source
+
+  FotoForensics also has in-app connections to TinEye, Google Lens, Bing, and RootAbout as well as hintfo.
+
+  There is 8 main tabs which are the same as those listed above, but also includes Digest. Here is a short explination of each tab and its functionality.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+    > Digest <
+    This tab contains general / commonly needed information about the image you upload: 
+
+      - File Type (PDF, jpeg, etc.)
+      - Dimensions (Pixels x Pixels)
+      - Color Channels (RGB, CMYK, etc.)
+      - Unique Colors (Number of unique colored pixels)
+      - File Size (Bytes)
+      - MD5	(The raw cryptographic hashes of your image)
+      - SHA1 (The raw cryptographic hashes of your image)
+      - SHA256 (The raw cryptographic hashes of your image)
+      - First Analyzed (Date & Time of First Analysis)
+
+    > ELA < 
+    Error Level Analysis (ELA) is a technique used to highlight areas of an image that may have been modified. It works by examining how different parts of a JPEG image degrade when recompressed. Because JPEG is a lossy format,
+    each save introduces compression artifacts. If some regions show different error levels than the rest, that can indicate they were edited or inserted.
+
+      Example: 
+      https://www.mdpi.com/2079-9292/11/9/1468
+
+      See (Fig. 2) how the added artifact has unnatural shading compared to the rest of the image. This can be telling of image modification.
+    
+      **Note** 
+      ELA is NOT a universally accepted method. Professionals often view ELA as a screening tool, not a conclusive forensic method. It’s easy to misinterpret.
+
+        What ELA Can Tell You:
+
+            - Whether parts of an image have different compression histories.    
+            - Potential regions of interest for deeper forensic analysis.
+            - Useful hints for CTFs, OSINT puzzles, or educational demos.
+
+        What ELA Cannot Do:
+
+            - It cannot definitively prove an image is fake.
+            - It cannot reliably hold up as courtroom-grade evidence on its own.
+
+    > Games <
+    This is exactly what it sounds like - some mildly interesting games you can play with your image while trying to figure out the OSINT Hard question in NCL. It currently has 2 games.
+
+      - Tiles - A puzzle game where you can drag randomized tiles to assemble the image
+      - Lights Out - A game where some of the tiles are inverted in color, and clicking them swaps that image and all bordering images between regular and inverted. Win by making all tiles regular.
+
+    > Hidden Pixels <
+    Graphical applications do not always display every pixel in a picture. This is common for images that use transparency (an alpha channel), and with JPEG cropping. Although the hidden pixels are not displayed when the picture is
+    rendered, they still contain color values. Different applications use different approaches for managing colors in undisplayed areas. This impacts the colors stored in the hidden pixels. These different approaches can be
+    identified and mapped to different types of applications.
+
+    When you upload an image, you may see "No Hidden Pixels" on the left. If so, your image either doesn't use transparancy or doesn't use PNG/JPEG cropping. If not, you'll have a few things to work with: 
+
+      - Alpha Channels
+      - PNG Alpha Signatures
+      - PNG Padding
+      - JPEG Padding
+
+    A tutorial on these masks with examples can be found here: 
+    (Web) https://fotoforensics.com/tutorial.php?tt=hidden-pixels
+
+    > ICC+ <
+    How your computer renders colors directly impacts what you see. The image file (JPEG, PNG, etc.) stores one set of colors. However, these colors may be automatically shifted by the application and operating system that
+    you use to view the picture. In general, pictures that come directly from a digital camera will not contain any applied color profiles. However, there are a few exceptions. For example, iPhones usually embed an iPhone-specific
+    color profile. In contrast, some applications (e.g., Adobe Photoshop) and services (e.g., Facebook) routinely apply color profiles to images prior to saving the image content. Color profiles that are embedded in pictures
+    explicitly modify colors: they may obscure, remove, or over emphasize minor differences. Applying a color profile could negatively impact your ability to view parts of the image.
+
+    The ICC+ tool will allow you to view your image with all of these different color profiles so that you can better see your image. 
+        - If there is no embedded ICC Profile, then you will see two entries: No Profile and Adobe. The Adobe option shows how the picture appears when loaded into an Adobe product, such as Photoshop or Lightroom.
+        - If there is an embedded ICC Profile, then you will see how the picture appears under each of the ICC Profile's rendering options.
+        - If there are any format specific rendering options, then each is listed.
+
+    > JPEG% <
+    This tool estimates the quality of any JPEG image inputted. JPEG images use a variable quality level to control the amount of compression. However, the JPEG quality is typically not stored in the metadata. Therefore, this tool
+    estimates the JPEG quality level last used to save the image.
+
+    Examples and use cases can be found here: https://fotoforensics.com/tutorial.php?tt=estq
+
+    > Metadata <
+    Possibly the most useful tool that FotoForensics has to offer for CTFs, the Metadata tool has 9 main categories and probably 100 different data fields. The main categories are:
+
+        - File (Mime Type, File Type, and Sampling Components)
+        - JFIF (Version)
+        - Photoshop (Resolution)
+        - IPTC (International Press Telecommunications Council) (Metadata format)
+        - EXIF (Exchangeable Image File Format) (A standard that specifies formats for images, sound, and ancillary tags used by digital cameras)
+        - ICC_Profile (A set of data that characterizes a color input or output device)
+        - XMP (Extensible Metadata Platform) (ISO standard, originally created by Adobe Systems for the creation, processing and interchange of standardized and custom metadata for digital documents and data sets)
+        - Composite (Camera data such as shutter speed, GPS, Image Size, and Megapixels)
+        - GPS (Approximate) (A more detailed, map-connected GPS dataset)
+
+    Any and all of these categories hold data very commonly used in CTFs. You can easily ctrl f search for the term they ask for, and you will typically find it.
+
+    > Strings <
+    The raw text string extraction of the metadata and image data. If you're looking for a flag hidden in an image and haven't found any leads yet, it's worth searching through these strings for a flag. Otherwise, the data is
+    better found and sorted using the other tools given.
+
+		> Source <
+		This is the image you uploaded without modification.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+	Toolbar Tools
+
+		Located below the aforementioned buttons, there is also a toolbar with a few different functions you may find helpful. 
+
+			- Rotate Left
+			- Rotate Right
+			- Flip Vertical
+			- Flip Horizontal
+			- Annotation Tool
+			- Colour Adjustment Tool
+			- Image Search Tools
+			- Hintfo
+
+--------------------------------------------------------------------------------------------------------------------------
+
+	That's about it for Fotoforensics. Their FAQ can be found here if you have further questions on what happens to your uploads: https://www.fotoforensics.com/faq.php
+
+--------------------------------------------------------------------------------------------------------------------------
+     
+	Example CTF Questions - Utilize OSINT Resources #1
+
+			- What device was this image captured on?
+			- What is the image size?
+			- What city and country was this image captured in? 
+			- What was the camera exposure time?
+
+	Answers:
+
+			- Apple IPhone 5
+			- 1024x768
+			- Saranda, Albania
+			- 1/640
+
+
