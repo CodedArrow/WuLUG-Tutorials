@@ -48,6 +48,9 @@ See the folder Contributer-Information!
 **🐧 About WuLUG**
 
 The mission of WuLUG (Wichita State University Linux Users Group) is to promote, inform, and develop an understanding of Free and Open Source Software (FOSS) and Cyber Security. 
+
 Discord: https://discord.gg/8jXb8u6FMj
+
 ShockerSync: https://wichita.campuslabs.com/engage/organization/wulug
+
 Contact Email: wulug@wichita.edu
