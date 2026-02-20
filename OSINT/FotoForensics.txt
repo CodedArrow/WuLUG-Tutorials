@@ -3,11 +3,11 @@ FotoForensics Writeup & Tutorial
 FF Ver. 1.1.5151 (2026-02-05)
 (Web) Link: https://www.fotoforensics.com/
 
+--------------------------------------------------------------------------------------------------------------------------
+
 **Note**
 While documentation can be found at https://fotoforensics.com/tutorial.php, It is written mostly to forensic analysts, not students. Sometimes it can be helpful to have more explanations or a different take on it. Thus, I write
 this from a perspective of someone using it mainly for CTFs (NCL, NCAE).
-
---------------------------------------------------------------------------------------------------------------------------
 
   PhotoForensics is a powerful OSINT image metadata analysis tool capable of:
     - ELA
@@ -38,6 +38,8 @@ this from a perspective of someone using it mainly for CTFs (NCL, NCAE).
       - SHA256 (The raw cryptographic hashes of your image)
       - First Analyzed (Date & Time of First Analysis)
 
+-----------------------
+
     > ELA < 
     Error Level Analysis (ELA) is a technique used to highlight areas of an image that may have been modified. It works by examining how different parts of a JPEG image degrade when recompressed. Because JPEG is a lossy format,
     each save introduces compression artifacts. If some regions show different error levels than the rest, that can indicate they were edited or inserted.
@@ -61,11 +63,15 @@ this from a perspective of someone using it mainly for CTFs (NCL, NCAE).
             - It cannot definitively prove an image is fake.
             - It cannot reliably hold up as courtroom-grade evidence on its own.
 
+-----------------------
+
     > Games <
     This is exactly what it sounds like - some mildly interesting games you can play with your image while trying to figure out the OSINT Hard question in NCL. It currently has 2 games.
 
       - Tiles - A puzzle game where you can drag randomized tiles to assemble the image
       - Lights Out - A game where some of the tiles are inverted in color, and clicking them swaps that image and all bordering images between regular and inverted. Win by making all tiles regular.
+
+-----------------------
 
     > Hidden Pixels <
     Graphical applications do not always display every pixel in a picture. This is common for images that use transparency (an alpha channel), and with JPEG cropping. Although the hidden pixels are not displayed when the picture is
@@ -82,6 +88,8 @@ this from a perspective of someone using it mainly for CTFs (NCL, NCAE).
     A tutorial on these masks with examples can be found here: 
     (Web) https://fotoforensics.com/tutorial.php?tt=hidden-pixels
 
+-----------------------
+
     > ICC+ <
     How your computer renders colors directly impacts what you see. The image file (JPEG, PNG, etc.) stores one set of colors. However, these colors may be automatically shifted by the application and operating system that
     you use to view the picture. In general, pictures that come directly from a digital camera will not contain any applied color profiles. However, there are a few exceptions. For example, iPhones usually embed an iPhone-specific
@@ -93,11 +101,15 @@ this from a perspective of someone using it mainly for CTFs (NCL, NCAE).
         - If there is an embedded ICC Profile, then you will see how the picture appears under each of the ICC Profile's rendering options.
         - If there are any format specific rendering options, then each is listed.
 
+-----------------------
+
     > JPEG% <
     This tool estimates the quality of any JPEG image inputted. JPEG images use a variable quality level to control the amount of compression. However, the JPEG quality is typically not stored in the metadata. Therefore, this tool
     estimates the JPEG quality level last used to save the image.
 
     Examples and use cases can be found here: https://fotoforensics.com/tutorial.php?tt=estq
+
+-----------------------
 
     > Metadata <
     Possibly the most useful tool that FotoForensics has to offer for CTFs, the Metadata tool has 9 main categories and probably 100 different data fields. The main categories are:
@@ -114,14 +126,18 @@ this from a perspective of someone using it mainly for CTFs (NCL, NCAE).
 
     Any and all of these categories hold data very commonly used in CTFs. You can easily ctrl f search for the term they ask for, and you will typically find it.
 
+-----------------------
+
     > Strings <
     The raw text string extraction of the metadata and image data. If you're looking for a flag hidden in an image and haven't found any leads yet, it's worth searching through these strings for a flag. Otherwise, the data is
     better found and sorted using the other tools given.
 
-		> Source <
-		This is the image you uploaded without modification.
+-----------------------
 
---------------------------------------------------------------------------------------------------------------------------
+	> Source <
+	This is the image you uploaded without modification.
+
+-----------------------
 
 	Toolbar Tools
 
