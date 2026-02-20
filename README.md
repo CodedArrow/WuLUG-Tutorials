@@ -7,7 +7,7 @@ Welcome to **WuLUG Tutorials**, an open space where Wichita State University stu
 Our goal is simple:
 Make it easier for WSU students to learn, teach, collaborate, and contribute to the broader cybersecurity and open‑source ecosystem.
 
-**🌟 What You’ll Find Here**
+**What You’ll Find Here**
 
 This repository is a collection of tutorials, walkthroughs, notes, and guides created by students, for students. Content may include:
 
@@ -20,7 +20,7 @@ This repository is a collection of tutorials, walkthroughs, notes, and guides cr
 
 If you’ve learned something useful, this is the place to document it so others can benefit too.
 
-**🧠 Who This Repo Is For**
+**Who This Repo Is For**
 
 - WSU students in Cybersecurity, Computer Science, IT, or related majors
 - Members of WuLUG (Wichita State Linux Users Group)
@@ -30,7 +30,7 @@ If you’ve learned something useful, this is the place to document it so others
 
 No experience required — just curiosity and a willingness to learn.
 
-**🤝 How to Contribute**
+**How to Contribute**
 
 We encourage contributions of all sizes. You can:
 
@@ -45,7 +45,7 @@ We encourage contributions of all sizes. You can:
 
 See the folder Contributer-Information!
 
-**🐧 About WuLUG**
+**About WuLUG**
 
 The mission of WuLUG (Wichita State University Linux Users Group) is to promote, inform, and develop an understanding of Free and Open Source Software (FOSS) and Cyber Security. 
 
