@@ -52,5 +52,3 @@ The mission of WuLUG (Wichita State University Linux Users Group) is to promote,
 Discord: https://discord.gg/8jXb8u6FMj
 
 ShockerSync: https://wichita.campuslabs.com/engage/organization/wulug
-
-Contact Email: wulug@wichita.edu
