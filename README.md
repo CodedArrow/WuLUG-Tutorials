@@ -34,12 +34,12 @@ No experience required — just curiosity and a willingness to learn.
 
 We encourage contributions of all sizes. You can:
 
-Add a new tutorial
-Improve an existing guide
-Submit a CTF writeup
-Fix formatting or typos
-Add diagrams, examples, or code snippets
-Propose new categories or topics
+- Add a new tutorial
+- Improve an existing guide
+- Submit a CTF writeup
+- Fix formatting or typos
+- Add diagrams, examples, or code snippets
+- Propose new categories or topics
 
 **Steps to contribute:**
 
