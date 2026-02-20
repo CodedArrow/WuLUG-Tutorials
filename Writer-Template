@@ -1,1 +1,44 @@
-Template Contents
+Here is the template for all contributers! feel free to read through this version for information, then copy the version below for an easy, fill-in-the-blank format!
+
+Title [Name of software, program, or application, and possibly a descriptive word. Example [hashcat]: Hashcat-Overview, Hashcat-MD5, Hashcat-Wordlisting, etc.]
+Date - Username/Name
+Version of software [If applicable. This allows for easier finding and updating of out-of-date writeups.]
+Link to Download [If applicable]
+
+--------------------------------------------------------------------------------------------
+
+Notes and Introduction
+  In this section, write any things that would cause the writeup to not be applicable to the reader, any limitations, or other dependencies. You could also include how to setup the software, if necessary.
+  Also, introduce yourself (if you'd like) and the program.
+
+--------------------------------------------------------------------------------------------
+
+Tutorial
+  Try to keep your writup specific to one thing. Many programs have a scope much greater than a single use case, so don't feel the need to include it all. it could overwhelm the reader.
+  Additionally, its easier to navigate the tutorials if this is done. 
+  An example could be with Wireshark- feel free to make different tutorials for basics, more in-depth filtering and analysis, and for different use cases.
+
+--------------------------------------------------------------------------------------------
+
+Conclusion and Resources
+  Here you can place any additional things that people may find useful. **Link your references!** You may also choose to put your discord, email, or another way for a confused reader to contact you with questions.
+
+--------------------------------------------------------------------------------------------
+
+
+
+**Copy Version**
+
+[TITLE]
+[DATE] - [USERNAME/NAME]
+[SOFTWARE VERSION]
+[LINK]
+
+--------------------------------------------------------------------------------------------
+[INTRO]
+--------------------------------------------------------------------------------------------
+[TUTORIAL]
+--------------------------------------------------------------------------------------------
+[CONCLUSION/RESOURCES]
+--------------------------------------------------------------------------------------------
+
