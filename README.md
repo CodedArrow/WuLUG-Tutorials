@@ -1,7 +1,6 @@
 # WuLUG-Tutorials
 
-_A community-driven knowledge hub for Wichita State University students in Cybersecurity, Linux, and related fields.
-_
+A community-driven knowledge hub for Wichita State University students in Cybersecurity, Linux, and related fields.
 
 Welcome to **WuLUG Tutorials**, an open space where Wichita State University students come together to share what they know, learn from each other, and build a stronger technical community. Whether you're deep into cybersecurity, exploring Linux for the first time, or branching into adjacent fields like networking, cloud, or software engineering, this repository is designed to help you grow.
 
