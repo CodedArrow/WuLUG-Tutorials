@@ -2,7 +2,7 @@ Here is the template for all contributers! feel free to read through this versio
 
 Title [Name of software, program, or application, and possibly a descriptive word. Example [hashcat]: Hashcat-Overview, Hashcat-MD5, Hashcat-Wordlisting, etc.]
 Date - Username/Name
-Version of software [If applicable. This allows for easier finding and updating of out-of-date writeups.]
+Version of software/Date [If applicable. This allows for easier finding and updating of out-of-date writeups.]
 Link to Download [If applicable]
 
 --------------------------------------------------------------------------------------------
