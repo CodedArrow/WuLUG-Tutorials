@@ -11,12 +11,12 @@ Make it easier for WSU students to learn, teach, collaborate, and contribute to 
 
 This repository is a collection of tutorials, walkthroughs, notes, and guides created by students, for students. Content may include:
 
-  - Cybersecurity concepts, tools, etc.
-  - CTF writeups and challenge explanations
-  - OSINT, Password Cracking, Log Analysis, WebEx & More
-  - Code Enumeration & Exploitation
-  - Virtualization, containers, and homelab setups/tips
-  - Anything else the community wants to share!
+- Cybersecurity concepts, tools, etc.
+- CTF writeups and challenge explanations
+- OSINT, Password Cracking, Log Analysis, WebEx & More
+- Code Enumeration & Exploitation
+- Virtualization, containers, and homelab setups/tips
+- Anything else the community wants to share!
 
 If you’ve learned something useful, this is the place to document it so others can benefit too.
 
